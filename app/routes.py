@@ -33,3 +33,7 @@ def register_main_routes(app):
     @app.route('/<string:film_title>/persons')
     def film_actors(film_title):
         return render_template('persons.html')
+
+    @app.route('/admin/import_export')
+    def import_export():
+        return render_template('import_export.html')
